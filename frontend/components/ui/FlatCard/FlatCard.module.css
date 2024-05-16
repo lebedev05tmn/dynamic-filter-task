@@ -1,0 +1,44 @@
+.card {
+  @apply border border-grey rounded-base overflow-hidden flex flex-col items-center w-full px-10 py-8 max-h-145;
+}
+
+.header {
+  @apply w-full flex justify-between;
+}
+
+.flat {
+  @apply text-black text-xl;
+}
+
+.likeButton {
+  @apply border border-black rounded-full cursor-pointer flex items-center justify-center hover:opacity-40;
+  width: 55px;
+  height: 55px;
+}
+
+.image {
+  @apply py-12 w-auto h-72;
+}
+
+.content {
+  @apply w-full flex flex-col;
+}
+
+.price {
+  @apply flex justify-between items-end mt-2;
+}
+
+.currentPrice {
+  @apply text-black text-4xl font-semibold;
+}
+
+.oldPrice {
+  @apply mb-2 ml-5 line-through text-black;
+}
+
+.detailRow {
+  @apply border-b border-b-grey flex justify-between mb-2 text-grey font-ev;
+  > span + span {
+    @apply text-black;
+  }
+}
