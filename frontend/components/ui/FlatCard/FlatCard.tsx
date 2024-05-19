@@ -21,13 +21,13 @@ const FlatCard: FC<FlatCardProps> = ({ data }) => {
     isLiked,
   } = data;
   return (
-    <li className={styles.card}>
-      <div className={styles.header}>
+    <article className={styles.card}>
+      <header className={styles.header}>
         <div>
           <span className={styles.flat}>
             {studio ? "Студия" : `${rooms}-комнатная`} {square} м²
           </span>
-          <span className={styles.price}>
+          <p className={styles.price}>
             <span className={styles.currentPrice}>
               {Number(price).toLocaleString()} ₽
             </span>
@@ -36,22 +36,25 @@ const FlatCard: FC<FlatCardProps> = ({ data }) => {
                 {Number(old_price).toLocaleString()} ₽
               </span>
             )}
-          </span>
+          </p>
         </div>
 
         <button className={styles.likeButton}>
-          <Like isLiked={isLiked} />
+          <Like isLiked={isLiked} className={styles.likeImage} />
         </button>
-      </div>
-      <Image
-        height={0}
-        width={0}
-        src={image}
-        alt={`${project_title} image`}
-        className={styles.image}
-        unoptimized
-      />
-      <div className={styles.content}>
+      </header>
+      <main>
+        <Image
+          height={0}
+          width={0}
+          src={image}
+          alt={`${project_title} image`}
+          className={styles.image}
+          unoptimized
+        />
+      </main>
+
+      <footer className={styles.content}>
         <div className={styles.detailRow}>
           <span>Проект</span>
           <span>{project_title}</span>
@@ -66,8 +69,8 @@ const FlatCard: FC<FlatCardProps> = ({ data }) => {
             {convertToRoman(release_dates[0]) + " " + release_dates.slice(1)}
           </span>
         </div>
-      </div>
-    </li>
+      </footer>
+    </article>
   );
 };
 

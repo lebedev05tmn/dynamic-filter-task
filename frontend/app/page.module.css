@@ -1,0 +1,7 @@
+.main {
+  @apply container overflow-hidden p-5 xl:py-9;
+}
+
+.title {
+  @apply uppercase text-2xl xl:text-9xl mb-6 xl:mb-12 font-medium;
+}

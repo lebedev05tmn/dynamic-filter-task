@@ -1,8 +1,12 @@
 import { FC } from "react";
 
-const Like: FC<{ isLiked: boolean }> = ({ isLiked }) => {
+const Like: FC<{ isLiked: boolean; className: string }> = ({
+  isLiked,
+  className,
+}) => {
   return (
     <svg
+      className={className}
       width="19"
       height="19"
       viewBox="0 0 19 19"

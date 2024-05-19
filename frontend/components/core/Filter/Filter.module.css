@@ -1,0 +1,11 @@
+.form {
+  @apply font-ev;
+}
+
+.label {
+  @apply text-2xxs xl:text-md text-grey;
+}
+
+.select {
+  @apply mt-1 block w-full p-2 border border-black rounded-md bg-none;
+}

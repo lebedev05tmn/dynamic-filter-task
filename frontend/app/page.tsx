@@ -1,18 +1,25 @@
 import { NextPage } from "next";
 import { fetchData } from "@/services/api";
 import FlatCard from "@/components/ui/FlatCard/FlatCard";
+import FlatList from "@/components/ui/FlatList/FlatList";
 import { Flat } from "@/types/interfaces";
+import styles from "./page.module.css";
+import Filter from "@/components/core/Filter/Filter";
 
 const HomePage: NextPage = async () => {
   const fetch: { data: Flat[] } = await fetchData(1);
   return (
-    <main className="container overflow-hidden px-5 py-9">
-      <ul className=" grid grid-cols-3 gap-20 list-none">
+    <main className={styles.main}>
+      <h1 className={styles.title}>Планироки</h1>
+      <Filter />
+      <FlatList>
         {fetch.data.length &&
           fetch.data.map((item: Flat) => (
-            <FlatCard data={item} key={item.id} />
+            <li key={item.id}>
+              <FlatCard data={item} />
+            </li>
           ))}
-      </ul>
+      </FlatList>
     </main>
   );
 };

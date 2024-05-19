@@ -16,3 +16,11 @@ export const metaText = {
   description:
     "Список квартир с фильтрами по планировкам, цене и типу квартиры",
 };
+
+export const FilterRoomTypes = {
+  STUDIO: "Ст",
+  ONE_ROOM: "1к",
+  TWO_ROOM: "2к",
+  THREE_ROOM: "3к",
+  FOUR_ROOM: "4к",
+};

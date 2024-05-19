@@ -1,5 +1,5 @@
 .card {
-  @apply border border-grey rounded-base overflow-hidden flex flex-col items-center w-full px-10 py-8 max-h-145;
+  @apply border-[0.58px] xl:border border-black-300 rounded-base overflow-hidden flex flex-col items-center px-10 py-8 max-h-145 w-[335px] xl:w-full;
 }
 
 .header {
@@ -7,17 +7,19 @@
 }
 
 .flat {
-  @apply text-black text-xl;
+  @apply text-black text-2xxs xl:text-xl;
 }
 
 .likeButton {
-  @apply border border-black rounded-full cursor-pointer flex items-center justify-center hover:opacity-40;
-  width: 55px;
-  height: 55px;
+  @apply border border-black rounded-full cursor-pointer flex items-center justify-center hover:opacity-40 w-[31.77px] h-[31.77px] xl:w-[55px] xl:h-[55px];
+}
+
+.likeImage {
+  @apply w-[11px] h-[11px] xl:w-auto xl:h-auto;
 }
 
 .image {
-  @apply py-12 w-auto h-72;
+  @apply py-12 w-auto max-h-[166px] xl:max-h-72;
 }
 
 .content {
@@ -29,15 +31,15 @@
 }
 
 .currentPrice {
-  @apply text-black text-4xl font-semibold;
+  @apply text-black text-md 3xl:text-4xl font-semibold;
 }
 
 .oldPrice {
-  @apply mb-2 ml-5 line-through text-black;
+  @apply mb-[3.5px] ml-5 line-through text-black text-2xxs xl:text-xs;
 }
 
 .detailRow {
-  @apply border-b border-b-grey flex justify-between mb-2 text-grey font-ev;
+  @apply border-b border-b-grey flex justify-between mb-2 text-grey font-ev text-2xxs xl:text-sm;
   > span + span {
     @apply text-black;
   }
