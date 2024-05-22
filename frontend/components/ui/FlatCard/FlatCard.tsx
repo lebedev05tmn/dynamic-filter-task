@@ -1,13 +1,15 @@
-import { FC } from "react";
+"use client";
+import { FC, useState } from "react";
 import Image from "next/image";
-import { Flat } from "@/types/interfaces";
+import { IFlat } from "@/types/interfaces";
 import styles from "./FlatCard.module.css";
 import { convertToRoman } from "@/utils";
 import Like from "../Like/Like";
 
-type FlatCardProps = { data: Omit<Flat, "id"> };
+type FlatCardProps = { data: Omit<IFlat, "id"> };
 
 const FlatCard: FC<FlatCardProps> = ({ data }) => {
+  const [isLiked, setIsLiked] = useState(false);
   const {
     project_title,
     rooms,
@@ -18,7 +20,6 @@ const FlatCard: FC<FlatCardProps> = ({ data }) => {
     release_dates,
     floor,
     image,
-    isLiked,
   } = data;
   return (
     <article className={styles.card}>
@@ -39,7 +40,9 @@ const FlatCard: FC<FlatCardProps> = ({ data }) => {
           </p>
         </div>
 
-        <button className={styles.likeButton}>
+        <button
+          className={styles.likeButton}
+          onClick={() => setIsLiked(!isLiked)}>
           <Like isLiked={isLiked} className={styles.likeImage} />
         </button>
       </header>

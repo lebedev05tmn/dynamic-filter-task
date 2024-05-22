@@ -1,0 +1,7 @@
+.legend {
+  @apply text-2xxs xl:text-md text-grey mb-3;
+}
+
+.select {
+  @apply block w-full px-[25px] py-[15px] border border-black rounded-base bg-none h-[55px];
+}

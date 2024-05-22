@@ -1,0 +1,7 @@
+.info {
+  @apply hidden xl:flex justify-end gap-[36%] w-full col-span-4 pt-12 pb-16 border-b border-b-black mb-12 border-opacity-20;
+}
+
+.reset {
+  @apply flex items-center gap-[5.5px];
+}

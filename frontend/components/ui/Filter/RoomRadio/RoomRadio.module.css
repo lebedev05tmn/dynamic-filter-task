@@ -1,0 +1,18 @@
+.legend {
+  @apply text-2xxs xl:text-md text-grey mb-3;
+}
+.roomList {
+  @apply flex gap-5;
+}
+
+.room {
+  @apply w-[49px] h-[49px] lg:w-[70px] lg:h-[55px] flex items-center justify-center border border-black rounded-base cursor-pointer text-lg;
+}
+
+.radio:checked + .room {
+  @apply bg-blue text-white border-none;
+}
+
+.radio {
+  @apply hidden;
+}

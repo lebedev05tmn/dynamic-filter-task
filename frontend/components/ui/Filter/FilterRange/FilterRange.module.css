@@ -1,0 +1,15 @@
+.input {
+  @apply border border-black opacity-75 rounded-base w-full relative h-[55px] flex items-center justify-between px-6 py-[15px];
+}
+
+.field {
+  display: inline;
+}
+
+.br {
+  @apply w-5 h-[1px] bg-black opacity-30;
+}
+
+.legend {
+  @apply text-2xxs xl:text-md text-grey mb-3;
+}
