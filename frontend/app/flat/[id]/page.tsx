@@ -1,8 +1,10 @@
-"use client";
+'use client';
 
-import { useParams } from "next/navigation";
+import { useParams } from 'next/navigation';
 
-export default function Page() {
+const Page = () => {
   const { id } = useParams();
   return <div>{id}</div>;
-}
+};
+
+export default Page;

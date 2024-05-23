@@ -11,7 +11,17 @@ export const FLATS_COUNT: number = 9;
 // Конфиг SEO для страницы
 
 export const metaText = {
-  title: "Тестовое задание Dynamic-Filter: список квартир с фильтрами",
+  title: 'Тестовое задание Dynamic-Filter: список квартир с фильтрами',
   description:
-    "Список квартир с фильтрами по планировкам, цене и типу квартиры",
+    'Список квартир с фильтрами по планировкам, цене и типу квартиры',
+};
+
+export const PARAMS: { [key: string]: string } = {
+  PROJECTS: 'f[projects][]',
+  SQUARE_MIN: 'f[square][min]',
+  SQUARE_MAX: 'f[square][max]',
+  ROOMS: 'f[rooms][]',
+  PRICE_MIN: 'f[price][min]',
+  PRICE_MAX: 'f[price][max]',
+  PAGE: 'page',
 };

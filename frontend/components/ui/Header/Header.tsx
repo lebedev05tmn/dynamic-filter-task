@@ -1,4 +1,4 @@
-export default function Header() {
+const Header = () => {
   return (
     <header className="p-10 bg-milk">
       <h1 className="text-2xl">
@@ -6,4 +6,6 @@ export default function Header() {
       </h1>
     </header>
   );
-}
+};
+
+export default Header;

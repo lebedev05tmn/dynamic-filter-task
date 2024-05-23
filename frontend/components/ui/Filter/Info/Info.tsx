@@ -1,6 +1,7 @@
-import { FC } from "react";
-import image from "@/public/reset.svg";
-import styles from "./Info.module.css";
+import Image from 'next/image';
+import { FC } from 'react';
+import image from '@/public/reset.svg';
+import styles from './Info.module.css';
 
 const Info: FC<{ handleReset: () => void; rooms: number }> = ({
   handleReset,
@@ -10,7 +11,7 @@ const Info: FC<{ handleReset: () => void; rooms: number }> = ({
     <fieldset className={styles.info}>
       <p>Найдено квартир: {rooms}</p>
       <button type="reset" onClick={handleReset} className={styles.reset}>
-        <img src={image.src} />
+        <Image src={image.src} width="19" height="19" alt="reset" />
         Очистить всё
       </button>
     </fieldset>

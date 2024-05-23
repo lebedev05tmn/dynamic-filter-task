@@ -1,0 +1,3 @@
+.Button {
+  @apply block lg:hidden bg-blue w-full h-[42px] text-xs font-medium py-3 text-white rounded-base border-none;
+}

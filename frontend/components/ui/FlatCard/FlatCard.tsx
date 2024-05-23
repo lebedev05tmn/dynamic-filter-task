@@ -1,12 +1,12 @@
-"use client";
-import { FC, useState } from "react";
-import Image from "next/image";
-import { IFlat } from "@/types/interfaces";
-import styles from "./FlatCard.module.css";
-import { convertToRoman } from "@/utils";
-import Like from "../Like/Like";
+'use client';
+import { FC, useState } from 'react';
+import Image from 'next/image';
+import { IFlat } from '@/types/interfaces';
+import styles from './FlatCard.module.css';
+import { convertToRoman } from '@/utils';
+import Like from '../Like/Like';
 
-type FlatCardProps = { data: Omit<IFlat, "id"> };
+type FlatCardProps = { data: Omit<IFlat, 'id'> };
 
 const FlatCard: FC<FlatCardProps> = ({ data }) => {
   const [isLiked, setIsLiked] = useState(false);
@@ -26,7 +26,7 @@ const FlatCard: FC<FlatCardProps> = ({ data }) => {
       <header className={styles.header}>
         <div>
           <span className={styles.flat}>
-            {studio ? "Студия" : `${rooms}-комнатная`} {square} м²
+            {studio ? 'Студия' : `${rooms}-комнатная`} {square} м²
           </span>
           <p className={styles.price}>
             <span className={styles.currentPrice}>
@@ -42,7 +42,8 @@ const FlatCard: FC<FlatCardProps> = ({ data }) => {
 
         <button
           className={styles.likeButton}
-          onClick={() => setIsLiked(!isLiked)}>
+          onClick={() => setIsLiked(!isLiked)}
+        >
           <Like isLiked={isLiked} className={styles.likeImage} />
         </button>
       </header>
@@ -69,7 +70,7 @@ const FlatCard: FC<FlatCardProps> = ({ data }) => {
         <div className={styles.detailRow}>
           <span>Срок сдачи</span>
           <span>
-            {convertToRoman(release_dates[0]) + " " + release_dates.slice(1)}
+            {convertToRoman(release_dates[0]) + ' ' + release_dates.slice(1)}
           </span>
         </div>
       </footer>

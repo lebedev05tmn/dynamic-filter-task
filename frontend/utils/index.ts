@@ -1,5 +1,7 @@
+import { ISearchParams } from '@/types/interfaces';
+
 export const convertToRoman = (number: string) => {
-  let str: string = "";
+  let str: string = '';
   let num: number = parseInt(number);
 
   if (num < 4) {
@@ -15,3 +17,8 @@ export const convertToRoman = (number: string) => {
   }
   return str;
 };
+
+export const getSearch = (searchParams: ISearchParams) =>
+  Object.entries(searchParams)
+    .reduce((acc: string, [key, value]) => (acc += `${key}=${value}&`), '')
+    .slice(0, -1);

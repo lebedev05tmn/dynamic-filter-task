@@ -1,3 +1,15 @@
 .form {
-  @apply font-ev flex flex-col 4xl:grid grid-cols-4 gap-5;
+  @apply font-ev flex flex-col 4xl:grid grid-cols-4 gap-5 mb-10 xl:m-0 w-[335px] lg:w-full;
+}
+
+.formHidden {
+  @apply hidden lg:flex;
+}
+
+.title {
+  @apply uppercase text-2xl xl:text-9xl mb-6 xl:mb-12 font-medium;
+}
+
+.Button {
+  @apply flex justify-center gap-[8.66px];
 }

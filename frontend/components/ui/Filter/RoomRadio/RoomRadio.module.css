@@ -6,7 +6,7 @@
 }
 
 .room {
-  @apply w-[49px] h-[49px] lg:w-[70px] lg:h-[55px] flex items-center justify-center border border-black rounded-base cursor-pointer text-lg;
+  @apply w-[49px] h-[49px] xl:w-[70px] xl:h-[55px] flex items-center justify-center border border-black rounded-base cursor-pointer text-lg;
 }
 
 .radio:checked + .room {

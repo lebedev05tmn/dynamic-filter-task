@@ -68,3 +68,13 @@ export interface IFilter {
   price: IRange;
   square: IRange;
 }
+
+export interface ISearchParams {
+  'f[projects][]': number;
+  'f[square][min]': number;
+  'f[square][max]': number;
+  'f[rooms][]': number;
+  'f[price][min]': number;
+  'f[price][max]': number;
+  page: number;
+}

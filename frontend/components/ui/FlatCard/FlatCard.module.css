@@ -1,5 +1,5 @@
 .card {
-  @apply border-[0.58px] xl:border border-black-300 rounded-base overflow-hidden flex flex-col items-center px-10 py-8 max-h-145 w-[335px] xl:w-full;
+  @apply border-[0.58px] xl:border border-black-300 rounded-base overflow-hidden flex flex-col items-center px-10 py-8 max-h-145 w-full;
 }
 
 .header {
