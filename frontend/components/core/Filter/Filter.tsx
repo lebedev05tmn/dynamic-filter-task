@@ -26,12 +26,12 @@ const Filter: FC<{
   const rooms: IRoom[] = filters.data.rooms;
 
   const [value, setValue] = useState<number[]>(
-    searchParams['f[price][max]'] & searchParams['f[price][min]']
+    searchParams['f[price][max]'] && searchParams['f[price][min]']
       ? [searchParams['f[price][max]'], searchParams['f[price][min]']]
       : price
   );
   const [roomValue, setRoomValue] = useState<number[]>(
-    searchParams['f[square][max]'] & searchParams['f[square][min]']
+    searchParams['f[square][max]'] && searchParams['f[square][min]']
       ? [searchParams['f[square][max]'], searchParams['f[square][min]']]
       : square
   );

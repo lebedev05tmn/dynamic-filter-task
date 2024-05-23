@@ -1,9 +1,9 @@
 import { FC } from 'react';
-import { IProject, ISearchParams } from '@/types/interfaces';
-import styles from './ProjectOption.module.css';
 import { useRouterPush } from '@/hook/useRouterPush';
 import { useRouter } from 'next/navigation';
 import { PARAMS } from '@/config';
+import { IProject, ISearchParams } from '@/types/interfaces';
+import styles from './ProjectOption.module.css';
 
 const ProjectOption: FC<{
   options: IProject[];

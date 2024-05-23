@@ -2,6 +2,9 @@
 import { FC, useEffect, useState } from 'react';
 import FlatList from '@/components/ui/FlatList/FlatList';
 import { FLATS_COUNT } from '@/config';
+import { getSearch } from '@/utils';
+import { fetchData } from '@/services/api';
+import Filter from '../Filter/Filter';
 import {
   IFilter,
   IFlat,
@@ -9,11 +12,8 @@ import {
   IMeta,
   ISearchParams,
 } from '@/types/interfaces';
-import { fetchData } from '@/services/api';
 import FlatCard from '@/components/ui/FlatCard/FlatCard';
 import styles from './FlatWithData.module.css';
-import Filter from '../Filter/Filter';
-import { getSearch } from '@/utils';
 
 const FlatListWithData: FC<{
   searchParams: ISearchParams;
